@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NFT-mine",
-    "slug": "NFT-mine",
+    "name": "Kuda_clone",
+    "slug": "Kuda_clone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#40196D",
     },
     "updates": {
       "fallbackToCacheTimeout": 0
