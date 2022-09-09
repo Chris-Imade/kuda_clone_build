@@ -1,6 +1,6 @@
 export { default as Home } from "./Home";
 export { default as Payment } from "./Payments";
-export { default as Settings } from "./Settings";
+export { default as More } from "./More";
 export { default as Budget } from "./Budget";
 export { default as Card } from "./Card";
 export { default as FundAcct } from "./FundAcct";
@@ -15,3 +15,4 @@ export { default as ResetPassword } from "./Auth/ResetPassword";
 export { default as PinAuth } from "./Auth/PinAuth";
 export { default as AuthWelcome } from "./Auth/AuthWelcome";
 export { default as Splash } from "./Splash";
+export { default as UserProfile } from "./UserProfile";

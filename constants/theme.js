@@ -3,5 +3,6 @@ export const COLORS = {
     secondary: "",
     primaryText: "#1B0733",
     secondaryText: "#B7B7B7",
-    tertiaryText: "#b7b7b762"
+    tertiaryText: "#b7b7b762",
+    borderLight: "#E7E7E7"
 }

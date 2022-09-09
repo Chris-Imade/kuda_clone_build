@@ -7,14 +7,17 @@ import { HeaderCard } from '../components';
 const Home = () => {
 
   return (
-    <>
+    <View style={{
+      backgroundColor: "white",
+      flex: 1
+    }}>
       <FocusedStatusBar 
         backgroundColor={"white"} 
         animated={true}
       />
         
         <HeaderCard />
-    </>
+    </View>
   )
 }
 

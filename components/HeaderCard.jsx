@@ -3,11 +3,13 @@ import React, { useState } from 'react'
 import { COLORS, assets } from '../constants';
 import HeaderHome from './HeaderHome';
 import PageContent from './PageContent';
+import SaveContent from './SaveContent';
+import BorrowContent from './BorrowContent';
 
 const accountDetails = [{
     fullName: "Imade Jephthah",
     accountBalance: "132,000",
-    accountSavings: "12,000"
+    accountSavings: "2,000,000"
 }]
 
 
@@ -19,18 +21,18 @@ const HeaderCard = () => {
         {/* Home Header Component */}
             <HeaderHome cardState={cardState} />
             {/* Home Card Information */}
-            <View className={`${cardState === "save" ? "bg-green-500" : "bg-[#40196D]"} h-[200px] mt-8 mx-4 rounded-[10px] items-center justify-center mb-6`}>
+            <View className={`${cardState === "save" ? "bg-green-500" : cardState === "borrow" ? "bg-[#2AD9EA]" : "bg-[#40196D]"} h-[200px] mt-8 mx-4 rounded-[10px] items-center justify-center mb-6`}>
                 <Text className={`text-center`}
                 style={{ 
-                    color: cardState != "save" ? COLORS.secondaryText : "#ffffff" 
-                    }}>{cardState != "save" ? "Account Balance" : "Your Savings"}</Text>
+                    color: cardState === "save" ? "#ffffff" : cardState === "borrow" ? "#ffffff" : COLORS.secondaryText
+                    }}>{cardState === "save" ? "Your Savings" : cardState === "borrow" ? "Borrow" : "Account Balance"}</Text>
                     <View className={`flex-row items-center justify-center mt-3`}>
                         <Image
                             source={assets.naira}
                             resizeMode={"contain"}
                             className={`w-[30px] h-[38px]`}
                         />
-                        <Text className={`text-[31.6px] font-semibold text-white ml-2`}>{cardState != "save" ? accountDetails[0].accountBalance : accountDetails[0].accountSavings}</Text>
+                        <Text className={`text-[31.6px] font-semibold text-white ml-2`}>{cardState === "save" ? accountDetails[0].accountSavings : cardState === "borrow" ? "0.0" : accountDetails[0].accountBalance}</Text>
                     </View>
                     <View className={`flex-row w-full justify-around mt-4`}>
                         {/* Spend Tab */}
@@ -104,7 +106,17 @@ const HeaderCard = () => {
                     </View>
             </View>
             {/* Dynamic Page Component */}
-            <PageContent cardState={cardState} />
+            {(() => {
+                if(cardState === "spend") {
+                    return <PageContent cardState={cardState} />;
+                } else if (cardState === "save") {
+                    return <SaveContent />;
+                } else if(cardState === "borrow") {
+                    return <BorrowContent />;
+                } else {
+                    return null;
+                }
+            })()}
         </>
   )
 }

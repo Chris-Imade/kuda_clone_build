@@ -87,4 +87,37 @@ const transactionData = [
     }
 ]
 
-export default transactionData;
+const friendsOnKuda = [
+    {
+        id: 1,
+        name: "Adamu Musa",
+        abr: "AM"
+    },
+    {
+        id: 2,
+        name: "Bello Abdul",
+        abr: "BA"
+    },
+    {
+        id: 3,
+        name: "Braham Kindred",
+        abr: "BK"
+    },
+    {
+        id: 4,
+        name: "Solan Tummuh",
+        abr: "ST"
+    },
+    {
+        id: 5,
+        name: "Coolth Tangh",
+        abr: "CT"
+    },
+    {
+        id: 6,
+        name: "Hungr Sweigh",
+        abr: "HS"
+    }
+]
+
+export { transactionData, friendsOnKuda };

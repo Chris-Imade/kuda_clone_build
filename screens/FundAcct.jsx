@@ -1,11 +1,31 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
+import { InfoBtn, PageTopNav } from '../components';
+import { assets } from '../constants';
 
 const FundAcct = () => {
   return (
-    <View className="flex-1 justify-center items-center bg-orange-200 text-slate-800">
-      <Text className="text-2xl font-semibold">FundAcct Page</Text>
-    </View>
+    <>
+      <PageTopNav page={"Add Money"} />
+      <ScrollView
+      showsVerticalScrollIndicator={false} 
+      className={`bg-white flex-1`}>
+        <View style={{
+          height: 30
+        }}></View>
+        <View className={`mx-4`}>
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.atIcon} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.ussd} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.bankTransferIcon} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.atIcon} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.ussd} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.bankTransferIcon} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.atIcon} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.ussd} />
+          <InfoBtn title={"Share your @Username"} subtitle={"Receive money from other Kuda"} shorterText={"users with your unique Username."} type={"fundAct"} image={assets.bankTransferIcon} />
+        </View>
+      </ScrollView>
+    </>
   )
 }
 

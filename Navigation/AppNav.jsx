@@ -10,7 +10,7 @@ import {
     Budget,
     Card,
     Payment,
-    Settings,
+    More,
     Welcome,
     TwoFAConfirmed,
     TwoFA,
@@ -23,7 +23,8 @@ import {
     AuthWelcome,
     Splash,
     Home,
-    FundAcct
+    FundAcct,
+    UserProfile
 } from "../screens/index";
 
 const AppStack = createStackNavigator();
@@ -60,6 +61,7 @@ const HomeStack = () => {
         })}>
             <Stack.Screen name={"HomeStack"} component={Home} />
             <Stack.Screen name={"FundAcct"} component={FundAcct} />
+            <Stack.Screen name={"ProfilePage"} component={UserProfile} />
         </Stack.Navigator>
   )
 }
@@ -110,7 +112,7 @@ const HomeApp = () => {
                     } else if (route.name === 'Card') {
                         navIcon = focused ? 'credit-card' : 'credit-card-multiple';
                         size = focused ? 28 : 24;
-                    } else if (route.name === 'Settings') {
+                    } else if (route.name === 'More') {
                         navIcon = focused ? 'view-grid' : 'grid';
                         size = focused ? 28 : 24;
                     }
@@ -132,7 +134,7 @@ const HomeApp = () => {
             <Tab.Screen name='Payment' component={Payment} />
             <Tab.Screen name='Budget' component={Budget} />
             <Tab.Screen name='Card' component={Card} />
-            <Tab.Screen name='Settings' component={Settings} />
+            <Tab.Screen name='More' component={More} />
         </Tab.Navigator>
     )
 }
@@ -151,7 +153,7 @@ const AppNavRootRender = () => {
     ) : (
         <NavigationContainer>
             <AppStack.Navigator screenOptions={() => ({
-                "headerShown": false
+                "headerShown": false,
             })}>
                 {
                     appstate.userToken ? (

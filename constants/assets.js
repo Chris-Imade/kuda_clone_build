@@ -7,7 +7,19 @@ import save from "../assets/images/save.png";
 import saveActive from "../assets/images/saveActive.png";
 import service from "../assets/images/service_logo.png";
 import spend from "../assets/images/spend.png";
+import spendAndSave from "../assets/images/spendSave.png";
 import naira from "../assets/images/naira.png";
+import flexibleSavings from "../assets/images/flexible_savings.png";
+import rightArrow from "../assets/images/right_arrow.png";
+import borrowIllustration from "../assets/images/borrow_illustration.png"; 
+import copy from "../assets/images/copy_icon.png";
+import leftArrowDetails from "../assets/images/left_arrow_details.png";
+import rightArrowDetails from "../assets/images/right_arrow_details.png";
+import atIcon from "../assets/images/at_icon.png";
+import bankTransferIcon from "../assets/images/bank_transfer_icon.png";
+import ussd from "../assets/images/ussd_icon.png";
+
+
 
 export default {
     addMoney,
@@ -19,5 +31,15 @@ export default {
     spend,
     naira,
     addMoneyActive,
-    saveActive
+    saveActive,
+    spendAndSave,
+    flexibleSavings,
+    rightArrow,
+    borrowIllustration,
+    copy,
+    leftArrowDetails,
+    rightArrowDetails,
+    atIcon,
+    bankTransferIcon,
+    ussd
 }

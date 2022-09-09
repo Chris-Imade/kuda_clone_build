@@ -1,11 +1,37 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView, Image } from 'react-native'
 import React from 'react'
+import { InfoBtn, PageTopNav } from '../components'
+import { assets } from '../constants'
 
 const Card = () => {
   return (
-    <View className="flex-1 justify-center items-center bg-orange-200 text-slate-800">
-      <Text className="text-2xl font-semibold">Card's Page</Text>
-    </View>
+    <>
+      <PageTopNav page={"Card"} type={"extra"} iconType={assets.addMoney} title={"Get Card"} />    
+      <ScrollView
+        contentContainerStyle={{
+          backgroundColor: "#ffffff",
+          flex: 1,
+          paddingHorizontal: 20,
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+        showsVerticalScrollIndicator={false}
+      >
+        <Image 
+          source={assets.borrowIllustration}
+          resizeMode={"contain"}
+          style={{
+            width: 400,
+            height: 400,
+            marginTop: 30,
+            marginBottom: 30
+          }}
+        />
+        <Text>Spend online and offline globally with your</Text>
+        <Text>Kuda cards.</Text>
+        <InfoBtn type={"fundAct"} title={"Request A Card"} subtitle={"We'll send it to you wherever you are."} image={assets.ussd} />
+      </ScrollView>
+    </>
   )
 }
 
